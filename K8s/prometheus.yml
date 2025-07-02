@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: prometheus-config
-  namespace: p248748monitor
+  namespace: monitor
   labels:
     name: prometheus-config
 data:
@@ -19,7 +19,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prometheus-deployment
-  namespace: p248748monitor
+  namespace: monitor
 spec:
   replicas: 1
   selector:
@@ -50,7 +50,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: prometheus
-  namespace: p248748monitor
+  namespace: monitor
 spec:
   selector:
     app: prometheus
